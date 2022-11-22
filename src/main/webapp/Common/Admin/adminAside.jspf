@@ -1,0 +1,46 @@
+<aside class="sticky bg-sidebar h-screen w-70 hidden sm:block shadow-xl">
+    <div class="p-1">
+        <a href="http://localhost:8080/moviesapp_war_exploded/welcome" class="text-white font-semibold uppercase hover:text-gray-300">
+            <h1 class="text-center text-3l">Admin</h1>
+        </a>
+    </div>
+    <nav class="text-white text-base font-semibold pt-3">
+        <div x-data="{ isOpen: false }">
+            <button @click="isOpen = !isOpen" class="w-full flex items-center text-white opacity-75 hover:opacity-100 py-4 px-6 nav-item">
+                <i class="fa-solid fa-toolbox mr-3"></i>
+                Mantenimientos
+            </button>
+            <div x-show="isOpen" class="bg-sidebar">
+                <a href="<%=request.getContextPath()%>/peliculas/listarPeliculas" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Peliculas</a>
+                <a href="<%=request.getContextPath()%>/fotos/listarFotos" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Fotos</a>
+                <a href="<%=request.getContextPath()%>/usuarios/listarUsuarios" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Usuarios</a>
+                <a href="<%=request.getContextPath()%>/categoria/listarCategoria" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Categorias</a>
+            </div>
+        </div>
+        <div x-data="{ isOpen: false }">
+            <button @click="isOpen = !isOpen" class="w-full flex items-center text-white opacity-75 hover:opacity-100 py-4 px-6 nav-item">
+                <i class="fa-solid fa-users mr-3"></i>
+                Usuarios
+            </button>
+            <div x-show="isOpen" class="bg-sidebar">
+                <a href="../../" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Vistas</a>
+                <a href="#b" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Nunca Vistas</a>
+                <a href="#c" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Mas Vistas</a>
+                <a href="#c" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Borra Clave</a>
+            </div>
+        </div>
+        <div x-data="{ isOpen: false }">
+            <button @click="isOpen = !isOpen" class="w-full flex items-center text-white opacity-75 hover:opacity-100 py-4 px-6 nav-item">
+                <i class="fa-solid fa-toolbox mr-3"></i>
+                Herramientas
+            </button>
+            <div x-show="isOpen" class="bg-sidebar">
+                <a href="../../" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Crear Respaldo</a>
+                <a href="../../" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Restaurar Respaldo</a>
+            </div>
+        </div>
+    </nav>
+    <a href="http://localhost:8080/moviesapp_war_exploded/logout" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
+        <i class="fa-solid fa-right-from-bracket mr-1"></i> Cerrar Sesion
+    </a>
+</aside>

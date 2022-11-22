@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="moviesapp:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ad63602-c5b3-451c-9e90-13d993a4027e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBFile/moviesdb.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/CategoriaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/FotosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/LogoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PeliculasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PeliculasVistasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/UsuariosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/CategoriaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/FotosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/LoginDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/PeliculasDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/PeliculasVistasDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/UsuariosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/PostgresDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Queries/qCategoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Queries/qFotos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Queries/qPeliculas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Queries/qPeliculasVistas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Queries/qUsuarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enum/AccesoEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enum/SesionEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enum/TipoEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Helpers/SessionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Helpers/generateCarnet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/iCategoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/iFotos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/iLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/iPeliculas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/iPeliculasVistas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/iUsuarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Categoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/CategoriaPeliculas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/EnumAccesoLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/EnumTipoLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Fotos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/PeliculaVista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Peliculas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/UsuarioSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Usuarios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/ViewModel/FotosViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/ViewModel/PeliculasViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Routes/RoutesServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/CSS/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Admin/adminAside.jspf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Modal/insertModalBeggining.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Modal/insertModalEnd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Shared/Merge/sharedBeginning.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Shared/Merge/sharedEnd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Shared/head.jspf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Shared/header.jspf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/Shared/navigation.jspf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Common/User/userAside.jspf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JS/AJAX/ajaxPeliculas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JS/borrarModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JS/estadoModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JS/insertModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Admin/example.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Admin/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Catalogo/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Catalogo/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Categoria/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Categoria/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Fotos/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Fotos/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Peliculas/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Peliculas/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Peliculas/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Shared/401.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Shared/404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Shared/welcome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/User/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Usuarios/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/Usuarios/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2HmhSveR6YifHGcQQJjmCHvM85i" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/raulh/IdeaProjects/moviesapp/src/main/webapp/View/Catalogo",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raulh\IdeaProjects\moviesapp\src\main\webapp\View\Catalogo" />
+      <recent name="C:\Users\raulh\IdeaProjects\moviesapp\src\main\webapp\View\Peliculas" />
+      <recent name="C:\Users\raulh\IdeaProjects\moviesapp" />
+      <recent name="C:\Users\raulh\IdeaProjects\moviesapp\src\main" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Model.ViewModel" />
+      <recent name="DB.Queries" />
+      <recent name="Interfaces" />
+      <recent name="DAO" />
+      <recent name="Controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.83">
+    <configuration name="edit.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/moviesapp_war_exploded/View/Peliculas/edit.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 8.5.83" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.83" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="moviesapp:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/moviesapp_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="4da878d9-29ce-436f-8918-1426ee96e61e" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52619" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="moviesapp:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.edit.jsp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ad63602-c5b3-451c-9e90-13d993a4027e" name="Changes" comment="" />
+      <created>1668896171903</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668896171903</updated>
+      <workItem from="1668896173145" duration="1373000" />
+      <workItem from="1668897567391" duration="45124000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

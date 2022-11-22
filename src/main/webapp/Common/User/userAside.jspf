@@ -1,0 +1,33 @@
+<aside class="sticky bg-sidebar h-screen w-70 hidden sm:block shadow-xl">
+    <div class="p-1">
+        <a href="index.html" class="text-white font-semibold uppercase hover:text-gray-300">
+            <h1 class="text-center text-3l">User</h1>
+        </a>
+    </div>
+    <nav class="text-white text-base font-semibold pt-3">
+        <div x-data="{ isOpen: false }">
+            <button @click="isOpen = !isOpen" class="w-full flex items-center text-white opacity-75 hover:opacity-100 py-4 px-6 nav-item">
+                <i class="fa-solid fa-film mr-3"></i>
+                Pelicula
+            </button>
+            <div x-show="isOpen" class="bg-sidebar">
+                <a href="<%=request.getContextPath()%>/peliculasVistas/todas" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Todas</a>
+                <a href="<%=request.getContextPath()%>/peliculasVistas/vistas" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Vistas</a>
+                <a href="<%=request.getContextPath()%>/peliculasVistas/noVistas" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>No vistas</a>
+            </div>
+        </div>
+        <div x-data="{ isOpen: false }">
+            <button @click="isOpen = !isOpen" class="w-full flex items-center text-white opacity-75 hover:opacity-100 py-4 px-6 nav-item">
+                <i class="fa-solid fa-film mr-3"></i>
+                Usuarios
+            </button>
+            <div x-show="isOpen" class="bg-sidebar">
+                <a href="#b" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Nunca vistas</a>
+                <a href="#c" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Graficos</a>
+            </div>
+        </div>
+    </nav>
+    <a href="http://localhost:8080/moviesapp_war_exploded/logout" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
+        <i class="fa-solid fa-right-from-bracket mr-1"></i> Cerrar Sesion
+    </a>
+</aside>
