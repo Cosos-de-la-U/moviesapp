@@ -38,10 +38,9 @@
     <textarea id="message"
               rows="4"
               name="comentario"
-              value="<c:out value='${comentario.getcomentario()}' />"
               type="text" required="required"
               class="py-5 px-10 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 white:bg-gray-700 white:border-gray-600 white:placeholder-gray-400 white:text-white white:focus:ring-blue-500 white:focus:border-blue-500"
-              placeholder="Escribe aqui tu comentario"></textarea>
+              placeholder="Escribe aqui tu comentario"><c:out value='${comentario.getComentario()}' /></textarea>
 
 
 </div>

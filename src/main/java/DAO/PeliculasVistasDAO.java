@@ -2,6 +2,7 @@ package DAO;
 
 
 import Interfaces.iPeliculas;
+import Model.Categoria;
 import Model.Fotos;
 import Model.PeliculaVista;
 import Model.Peliculas;
@@ -16,6 +17,7 @@ import java.util.List;
 
 import static DB.PostgresDriver.getConnection;
 import static DB.PostgresDriver.printSQLException;
+import static DB.Queries.qCategoria.SELECT_CATEGORIA;
 import static DB.Queries.qFotos.INSERT_FOTOS;
 import static DB.Queries.qPeliculas.SELECT_PELICULAS_VISTA;
 import static DB.Queries.qPeliculasVistas.*;
@@ -53,7 +55,7 @@ public class PeliculasVistasDAO {
     }
 
     public PeliculaVista select(String carnet, int idpelicula) {
-        PeliculaVista peliculas = null;
+        PeliculaVista peliculavista = null;
         // Step 1: Establishing a Connection
         try (Connection connection = getConnection();
              // Step 2:Create a statement using connection object
@@ -70,12 +72,13 @@ public class PeliculasVistasDAO {
                 int idpeliculaV = rs.getInt("idpelicula");
                 String carnetV = rs.getString("carnet");
                 String comentario = rs.getString("comentario");
-                int califcacion = rs.getInt("califcacion");
-                peliculas = new PeliculaVista(idpeliculavista, idpeliculaV, carnetV, comentario, califcacion);
+                int calificacion = rs.getInt("calificacion");
+                peliculavista = new PeliculaVista(idpeliculavista, idpeliculaV, carnetV, comentario, calificacion);
             }
         } catch (SQLException e) {
+            printSQLException(e);
         }
-        return peliculas;
+        return peliculavista;
     }
 
     public void comentar(PeliculaVista comentario) throws SQLException {

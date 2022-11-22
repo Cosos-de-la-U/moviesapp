@@ -15,6 +15,6 @@ public class qPeliculasVistas {
     public static final String SELECT_CATALOGO_VISTA_ALL = "select * from peliculaCatalogoVista;";
     public static final String INSERT_CATALOGO_FUNCTION = "SELECT insertarPelicula(?, ?, ?, ?, ?)";
     public static final String INSERT_COMENTARIO = "INSERT INTO peliculavista(idpelicula, carnet, comentario, calificacion) values (?, ?, ? ,?);";
-    public static final String UPDATE_COMENTARIO = "UPDATE SET idpelicula = ?, carnet = ?, comentario = ?, calificacion = ? WHERE carnet = ? AND idpelicula = ?;";
+    public static final String UPDATE_COMENTARIO = "UPDATE peliculavista SET idpelicula = ?, carnet = ?, comentario = ?, calificacion = ? WHERE carnet = ? AND idpelicula = ?;";
 
 }

@@ -96,13 +96,13 @@ public class PeliculasVistasController extends HttpServlet {
         String carnet = usuario.getCarnet();
 
         int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
-
+        System.out.println(carnet + " " + idpelicula);
         PeliculaVista pv = peliculasVistasDAO.select(carnet, idpelicula);
         if(pv != null){
-            response.sendRedirect("editarComentario");
+            response.sendRedirect("editarComentario?idpelicula="+idpelicula);
         }else {
-            response.sendRedirect("nuevoComentario");
-            //response.sendRedirect("showEditFormComentario");
+            session.setAttribute("idpelicula", idpelicula);
+            response.sendRedirect("nuevoComentario?idpelicula="+idpelicula);
         }
     }
 
@@ -111,12 +111,13 @@ public class PeliculasVistasController extends HttpServlet {
         //get session data
         HttpSession session = request.getSession();
         Usuarios usuario = (Usuarios) session.getAttribute("usuarioSession");
+        int idp = (int) session.getAttribute("idpelicula");
         String carnet = usuario.getCarnet();
 
-        int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
+        int idpelicula = idp;
         PeliculaVista comentario = peliculasVistasDAO.select(carnet, idpelicula);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/View/Catalogo/create.jsp");
         request.setAttribute("comentario", comentario);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/View/Catalogo/create.jsp");
         dispatcher.forward(request, response);
     }
     private void showEditFormComentario(HttpServletRequest request, HttpServletResponse response)
@@ -128,8 +129,9 @@ public class PeliculasVistasController extends HttpServlet {
 
         int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
         PeliculaVista comentario = peliculasVistasDAO.select(carnet, idpelicula);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/View/Catalogo/create.jsp");
         request.setAttribute("comentario", comentario);
+        System.out.println(comentario.getIdpelicula());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/View/Catalogo/create.jsp");
         dispatcher.forward(request, response);
 
     }
@@ -139,13 +141,15 @@ public class PeliculasVistasController extends HttpServlet {
         HttpSession session = request.getSession();
         Usuarios usuario = (Usuarios) session.getAttribute("usuarioSession");
         String carnet = usuario.getCarnet();
+        int idp = (int) session.getAttribute("idpelicula");
         //All the stuff
-        int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
+        int idpelicula = idp;
         String comentario = request.getParameter("comentario");
         int calificacion = Integer.parseInt(request.getParameter("calificacion"));
 
         PeliculaVista peliculaV = new PeliculaVista(idpelicula, carnet, comentario, calificacion);
         peliculasVistasDAO.comentar(peliculaV);
+        session.setAttribute("idpelicula", null);
         response.sendRedirect("todas");
     }
     private void updateComentario(HttpServletRequest request, HttpServletResponse response)

@@ -12,8 +12,6 @@
             </button>
             <div x-show="isOpen" class="bg-sidebar">
                 <a href="<%=request.getContextPath()%>/peliculasVistas/todas" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Todas</a>
-                <a href="<%=request.getContextPath()%>/peliculasVistas/vistas" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Vistas</a>
-                <a href="<%=request.getContextPath()%>/peliculasVistas/noVistas" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>No vistas</a>
             </div>
         </div>
         <div x-data="{ isOpen: false }">
@@ -22,7 +20,6 @@
                 Usuarios
             </button>
             <div x-show="isOpen" class="bg-sidebar">
-                <a href="#b" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Nunca vistas</a>
                 <a href="#c" class="block px-4 py-2 text-white account-link boton-hover"><i class="fa-solid fa-plus fa-2xs mr-1"></i>Graficos</a>
             </div>
         </div>

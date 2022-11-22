@@ -16,9 +16,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PeliculasVistasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PeliculasVistasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/PeliculasVistasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/PeliculasVistasDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/Queries/qPeliculasVistas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/Queries/qPeliculasVistas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ViewModel/PeliculasViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ViewModel/PeliculasViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Common/Admin/adminAside.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Common/Admin/adminAside.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Common/User/userAside.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Common/User/userAside.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/View/Catalogo/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/View/Catalogo/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/View/Catalogo/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/View/Catalogo/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668896171903</updated>
       <workItem from="1668896173145" duration="1373000" />
-      <workItem from="1668897567391" duration="54112000" />
+      <workItem from="1668897567391" duration="59709000" />
     </task>
     <task id="LOCAL-00001" summary="Project W11">
       <created>1669144790954</created>
