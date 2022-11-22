@@ -42,10 +42,10 @@ public class LoginController extends HttpServlet {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
                 dispatcher.forward(request, response);
             }
+        }else {
+            //If there is an available user
+            response.sendRedirect("welcome");
         }
-        //If there is an available user
-        response.sendRedirect("welcome");
-
     }
 
 }

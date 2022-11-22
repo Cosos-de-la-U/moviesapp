@@ -5,6 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 
 public class PeliculasViewModel {
+    private int idpeliculavista;
     private int idpelicula;
     private String nombre;
     private String nomb_ingles;
@@ -28,6 +29,18 @@ public class PeliculasViewModel {
         this.idpelicula = idpelicula;
         this.nombre = nombre;
         this.nomb_ingles = nomb_ingles;
+        this.categoria = categoria;
+        this.foto = foto;
+        this.yearp = yearp;
+        this.duracion = duracion;
+    }
+
+    public PeliculasViewModel(int idpeliculavista, int idpelicula, String nombre, String nomb_ingles, int idcategoria, String categoria, byte[] foto, int yearp, int duracion) {
+        this.idpeliculavista = idpeliculavista;
+        this.idpelicula = idpelicula;
+        this.nombre = nombre;
+        this.nomb_ingles = nomb_ingles;
+        this.idcategoria = idcategoria;
         this.categoria = categoria;
         this.foto = foto;
         this.yearp = yearp;

@@ -79,6 +79,17 @@ INNER JOIN categoria c on cp.idcategoria = c.idcategoria
 INNER JOIN fotos f on p.idpelicula = f.idpelicula where primera = 'y';
 
 select * from peliculaCatalogoVista;
+
+/*View peliculasUsaurioVistas*/
+create or replace view peliculaCatalogoVistaVistas
+as select pv.idpeliculavista, p.idpelicula,p.nombre, p.nomb_ingles, f.foto, c.categoria, p,yearp, p.duracion
+from peliculavista pv
+INNER JOIN peliculas p on pv.idpelicula = p.idpelicula
+INNER JOIN categoriapeliculas cp on p.idpelicula = cp.idpelicula
+INNER JOIN categoria c on cp.idcategoria = c.idcategoria
+INNER JOIN fotos f on p.idpelicula = f.idpelicula where primera = 'y';
+
+select * from peliculaCatalogoVista;
 /*Vistas*******************************************************************************************************************************/
 
 
@@ -126,7 +137,5 @@ SELECT updatePelicula(4, 'ha1', 'ha2', 3, 100,100);
 
 
 /*Tries*******************************************************************************************************************************/
-UPDATE fotos SET idpelicula =7, foto = 'arsrasa', primera = 'y' WHERE idfoto = 3
-
-INSERT INTO peliculavista(idpelicula, carnet, comentario, calificacion) values (?, ?, ? ,?);
+UPDATE fotos SET idpelicula =7, foto = 'arsrasa', primera = 'y' WHERE idfoto = 3;
 /*Tries*******************************************************************************************************************************/

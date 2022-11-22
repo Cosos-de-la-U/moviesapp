@@ -17,6 +17,7 @@ import java.util.List;
 import static DB.PostgresDriver.getConnection;
 import static DB.PostgresDriver.printSQLException;
 import static DB.Queries.qFotos.INSERT_FOTOS;
+import static DB.Queries.qPeliculas.SELECT_PELICULAS_VISTA;
 import static DB.Queries.qPeliculasVistas.*;
 
 
@@ -51,6 +52,32 @@ public class PeliculasVistasDAO {
         return peliculas;
     }
 
+    public PeliculaVista select(String carnet, int idpelicula) {
+        PeliculaVista peliculas = null;
+        // Step 1: Establishing a Connection
+        try (Connection connection = getConnection();
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_CATALOGO);) {
+            preparedStatement.setString(1, carnet);
+            preparedStatement.setInt(2, idpelicula);
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                int idpeliculavista = rs.getInt("idpeliculavista");
+                int idpeliculaV = rs.getInt("idpelicula");
+                String carnetV = rs.getString("carnet");
+                String comentario = rs.getString("comentario");
+                int califcacion = rs.getInt("califcacion");
+                peliculas = new PeliculaVista(idpeliculavista, idpeliculaV, carnetV, comentario, califcacion);
+            }
+        } catch (SQLException e) {
+        }
+        return peliculas;
+    }
+
     public void comentar(PeliculaVista comentario) throws SQLException {
         System.out.println(INSERT_COMENTARIO);
         // try-with-resource statement will auto close the connection.
@@ -60,6 +87,24 @@ public class PeliculasVistasDAO {
             preparedStatement.setString(2, comentario.getCarnet());
             preparedStatement.setString(3, comentario.getComentario());
             preparedStatement.setInt(4, comentario.getCalificacion());
+            System.out.println(preparedStatement);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+    }
+
+    public void comentarUpdate(PeliculaVista comentario) throws SQLException {
+        System.out.println(INSERT_COMENTARIO);
+        // try-with-resource statement will auto close the connection.
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_COMENTARIO)) {
+            preparedStatement.setInt(1, comentario.getIdpelicula());
+            preparedStatement.setString(2, comentario.getCarnet());
+            preparedStatement.setString(3, comentario.getComentario());
+            preparedStatement.setInt(4, comentario.getCalificacion());
+            preparedStatement.setString(5, comentario.getCarnet());
+            preparedStatement.setInt(6, comentario.getIdpelicula());
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

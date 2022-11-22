@@ -23,7 +23,7 @@
                     </div>
                     <div class="flex items-center">
                         <div class="text-sm">
-                            <a href="comentar?idpelicula=<c:out value='${pelicula.getIdpelicula()}' />" class="font-black">
+                            <a href="comentario?idpelicula=<c:out value='${pelicula.getIdpelicula()}' />" class="font-black">
                                 Agregar comentario/vista <i class="fa-solid fa-plus" style="color: #3D68FF"></i>
                             </a>
                         </div>

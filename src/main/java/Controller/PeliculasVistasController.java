@@ -18,7 +18,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name = "peliculasVistas", urlPatterns = {
-        "/peliculasVistas/todas", "/peliculasVistas/vistas", "/peliculasVistas/noVistas", "/peliculasVistas/comentar"})
+        "/peliculasVistas/todas", "/peliculasVistas/vistas", "/peliculasVistas/noVistas", "/peliculasVistas/comentario", "/peliculasVistas/editarComentario", "/peliculasVistas/nuevoComentario","/peliculasVistas/insertComentario", "/peliculasVistas/updateComentario"})
 
 public class PeliculasVistasController extends HttpServlet {
     private PeliculasVistasDAO peliculasVistasDAO;
@@ -48,8 +48,20 @@ public class PeliculasVistasController extends HttpServlet {
                 case "/peliculasVistas/noVistas":
                     listNoVistas(request,response);
                     break;
-                case "/peliculasVistas/comentar":
-                    comentario(request, response);
+                case "/peliculasVistas/comentario":
+                    comentario(request,response);
+                    break;
+                case "/peliculasVistas/nuevoComentario":
+                    showNewFormComentario(request, response);
+                    break;
+                case "/peliculasVistas/editarComentario":
+                    showEditFormComentario(request, response);
+                    break;
+                case "/peliculasVistas/insertComentario":
+                    insertComentario(request, response);
+                    break;
+                case "/peliculasVistas/updateComentario":
+                    updateComentario(request, response);
                     break;
             }
         } catch (SQLException e) {
@@ -77,22 +89,78 @@ public class PeliculasVistasController extends HttpServlet {
     }
 
     private void comentario(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, IOException, ServletException {
+            throws SQLException, ServletException, IOException {
+        //get session data
+        HttpSession session = request.getSession();
+        Usuarios usuario = (Usuarios) session.getAttribute("usuarioSession");
+        String carnet = usuario.getCarnet();
+
+        int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
+
+        PeliculaVista pv = peliculasVistasDAO.select(carnet, idpelicula);
+        if(pv != null){
+            response.sendRedirect("editarComentario");
+        }else {
+            response.sendRedirect("nuevoComentario");
+            //response.sendRedirect("showEditFormComentario");
+        }
+    }
+
+    private void showNewFormComentario(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        //get session data
+        HttpSession session = request.getSession();
+        Usuarios usuario = (Usuarios) session.getAttribute("usuarioSession");
+        String carnet = usuario.getCarnet();
+
+        int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
+        PeliculaVista comentario = peliculasVistasDAO.select(carnet, idpelicula);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/View/Catalogo/create.jsp");
+        request.setAttribute("comentario", comentario);
+        dispatcher.forward(request, response);
+    }
+    private void showEditFormComentario(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, ServletException, IOException {
+        //get session data
+        HttpSession session = request.getSession();
+        Usuarios usuario = (Usuarios) session.getAttribute("usuarioSession");
+        String carnet = usuario.getCarnet();
+
+        int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
+        PeliculaVista comentario = peliculasVistasDAO.select(carnet, idpelicula);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/View/Catalogo/create.jsp");
+        request.setAttribute("comentario", comentario);
+        dispatcher.forward(request, response);
+
+    }
+    private void insertComentario(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException {
         //get session data
         HttpSession session = request.getSession();
         Usuarios usuario = (Usuarios) session.getAttribute("usuarioSession");
         String carnet = usuario.getCarnet();
         //All the stuff
         int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
-        int calificacion = Integer.parseInt(request.getParameter("calificacion"));
         String comentario = request.getParameter("comentario");
+        int calificacion = Integer.parseInt(request.getParameter("calificacion"));
 
         PeliculaVista peliculaV = new PeliculaVista(idpelicula, carnet, comentario, calificacion);
         peliculasVistasDAO.comentar(peliculaV);
-        response.sendRedirect("listarPeliculas");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/View/Usuarios/create.jsp");
-        dispatcher.forward(request, response);
+        response.sendRedirect("todas");
     }
+    private void updateComentario(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException {
+        //get session data
+        HttpSession session = request.getSession();
+        Usuarios usuario = (Usuarios) session.getAttribute("usuarioSession");
+        String carnet = usuario.getCarnet();
+        //All the stuff
+        int idpelicula = Integer.parseInt(request.getParameter("idpelicula"));
+        String comentario = request.getParameter("comentario");
+        int calificacion = Integer.parseInt(request.getParameter("calificacion"));
 
-
+        PeliculaVista peliculaV = new PeliculaVista(idpelicula, carnet, comentario, calificacion);
+        peliculasVistasDAO.comentarUpdate(peliculaV);
+        response.sendRedirect("todas");
+    }
 }
